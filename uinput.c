@@ -118,8 +118,10 @@ void process(u_int64_t scan) {
   // Switch mode
   if(scan & (1<<14)) {
     mode = 0;
+    input_setup(); // Workaround for retropie
   } else if (scan & (1<<15)) {
     mode = 1;
+    input_setup(); // Workaround for retropie
   }
 
   // Normal codes
